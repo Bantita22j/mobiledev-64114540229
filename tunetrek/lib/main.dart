@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'home.dart'; // Home Page
 import 'login.dart';
 
 void main() {
@@ -7,17 +6,17 @@ void main() {
 }
 
 class ConcertDiaryApp extends StatelessWidget {
-  final String username; // เพิ่มตัวแปร username
-  final String userId; // เพิ่มตัวแปร userId
+  final String username; 
+  final String userId; 
 
-  // ปรับ constructor
+  
   ConcertDiaryApp({required this.username, required this.userId});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Welcome $username'), // ใช้ username ที่ส่งมาที่นี่
+        title: Text('Welcome $username'), 
       ),
       body: Center(
         child: Text('This is your concert diary page.'),
@@ -51,7 +50,7 @@ class HomePage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Center(
-          // จัดให้ข้อความอยู่ตรงกลางหน้าจอ
+          
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -64,7 +63,7 @@ class HomePage extends StatelessWidget {
                   fontSize: 16,
                   color: Colors.grey[700],
                 ),
-                textAlign: TextAlign.center, // จัดข้อความให้อยู่ตรงกลาง
+                textAlign: TextAlign.center, 
               ),
               SizedBox(height: 20),
               Text(
@@ -96,7 +95,7 @@ class HomePage extends StatelessWidget {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.pink[300], // ปุ่มสีชมพูพาสเทล
+                  backgroundColor: Colors.pink[300], 
                   padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'auth_service.dart'; // นำเข้าไฟล์ที่มีฟังก์ชัน register
 
 class RegisterPage extends StatefulWidget {
+  
   @override
   _RegisterPageState createState() => _RegisterPageState();
 }

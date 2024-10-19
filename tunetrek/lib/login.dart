@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:pocketbase/pocketbase.dart';
+import 'package:pocketbase/pocketbase.dart';
 import 'home_user.dart'; // Import หน้า main_page สำหรับผู้ใช้ทั่วไป
 import 'home_dmin.dart'; // Import หน้า MemberPage สำหรับแอดมิน
 import 'auth_service.dart'; //ฟังก์ชั่น login
@@ -10,6 +10,7 @@ import 'package:tunetrek/register.dart' as register;
 class LoginPage extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final PocketBase pb = PocketBase('http://127.0.0.1:8090');
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +54,7 @@ class LoginPage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) =>
-                            MemberPage(username: user.username),
+                            HomeAdmin(username: user.username),
                       ),
                     );
                   } else {
